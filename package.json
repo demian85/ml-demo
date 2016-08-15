@@ -1,0 +1,20 @@
+{
+  "name": "mercadolibre",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "Demián Rodriguez",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-html-minifier2": "^1.1.8",
+    "gulp-postcss": "^6.1.1",
+    "gulp-webpack": "^1.5.0"
+  }
+}
