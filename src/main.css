@@ -2,6 +2,24 @@ html, body {
     font-size: 12px;
 }
 
+* {
+    margin: 0;
+}
+
+h1 {
+    font-size: 1.75em;
+    margin-bottom: 1em;
+}
+
+h2, h3 {
+    margin-bottom: 1em;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
 .product {
     max-width: 700px;
     border: 1px solid #000;
@@ -17,11 +35,13 @@ html, body {
     max-width: 250px;
     max-height: 250px;
     flex: 0 0 auto;
+    align-self: flex-start;
 }
 
 .product-info {
     flex: 1 1 auto;
     padding: 1em;
+    overflow: hidden;
 }
 
 .product-price {
@@ -48,41 +68,47 @@ html, body {
     color: #fff;
     padding: 0.25em 1em;
     font-size: 1.35em;
-    margin: 1em 0 0.1em 0;
+    margin: 1em 0 0.5em 0;
     cursor: pointer;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    border: 0;
 }
 
 .ml-text {
-    font-size: 0.8em;
+    font-size: 0.9em;
     color: gray;
+    margin-bottom: 2.5em;
 }
 
 .product-details {
     margin-top: 2em;
     border-top: 1px solid gray;
-    padding: 1em;
-}
-
-.related-products {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-.related-products > li {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 1em;
-}
-
-.related-products img {
-    max-width: 100px;
+    padding-top: 1em;
 }
 
 .tab-content {
     display: none;
+    position: relative;
+    top: -1px;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+}
+
+.product-tabs {
+    display: flex;
+}
+
+.product-tabs > li:first-child {
+    margin-left: 0;
+}
+
+.product-tabs > li {
+    flex: 0 0 auto;
+    border: 1px solid #ccc;
+    background-color: white;
+    padding: 0.5em 1em;
+    margin-left: -5px;
+    border-top-right-radius: 20px;
 }
 
 #product-description:target,
@@ -90,6 +116,21 @@ html, body {
     display: block;
 }
 
-h1 {
-    font-size: 1.75em;
+#product-questions .question {
+    color: #4675a7;
+}
+
+#product-questions .question p {
+    background-color: #cfe2fc;
+    padding: 0.5em 0.5em 0.5em 3em;
+    margin-bottom: 1em;
+}
+
+#product-questions .answer {
+    color: #658e58;
+}
+
+#product-questions .answer p {
+    background-color: #dbebd4;
+    padding: 0.5em 0.5em 0.5em 3em;
 }
