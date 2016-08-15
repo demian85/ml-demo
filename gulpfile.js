@@ -4,7 +4,7 @@ gulp.task('html', function() {
     const htmlmin = require('gulp-html-minifier2');
     return gulp.src('./src/*.html')
         .pipe(htmlmin({collapseWhitespace: true}))
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest(__dirname));
 });
 
 gulp.task('css', function() {
@@ -19,14 +19,14 @@ gulp.task('css', function() {
     return gulp.src('./src/*.css')
         .pipe(concatCss("app.bundle.css"))
         .pipe(postcss(processors))
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest(__dirname));
 });
 
 gulp.task('js', function() {
     const webpack = require('gulp-webpack');
     return gulp.src('./src/*.js')
         .pipe(webpack(require('./webpack.config.js')))
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest(__dirname));
 });
 
 gulp.task('default', ['html', 'css', 'js']);
